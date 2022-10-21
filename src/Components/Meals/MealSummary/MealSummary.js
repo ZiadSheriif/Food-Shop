@@ -1,10 +1,11 @@
-import  classes from './MealsSummary.module.css'
+import {StyledMealSummaryHeaderTwo,StyledMealSummarySection} from "./MealSummary.styled";
+
 const MealSummary = () => {
     return (
-        <section className={classes.summary}>
-            <h2 >
+        <StyledMealSummarySection>
+            <StyledMealSummaryHeaderTwo >
                 Delicious Food , Delivered To You
-            </h2>
+            </StyledMealSummaryHeaderTwo>
             <p>
                 Choose your favorite meal from our broad selection of available meals
                 and enjoy a delicious lunch or dinner at home.
@@ -13,7 +14,7 @@ const MealSummary = () => {
                 All our meals are cooked with high-quality ingredients, just-in-time and
                 of course by experienced chefs!
             </p>
-        </section>
+        </StyledMealSummarySection>
 
     );
 

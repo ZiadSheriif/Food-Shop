@@ -1,17 +1,17 @@
-import classes from './MealItem.module.css'
+import  {StyledMealItem,StyledMealItemPrice,StyledMealItemName} from "./MealItem.styled";
 
 const MealItem = (props) => {
     const price = `$${props.price}`;
     console.log(price);
 
     return (
-        <li className={classes.meal}>
+        <StyledMealItem>
             <div>
-                <h3>{props.name}</h3>
+                <StyledMealItemName>{props.name}</StyledMealItemName>
                 <em >{[props.description]}</em>
-                <div className={classes.price}> {price}</div>
+                <StyledMealItemPrice> {price}</StyledMealItemPrice>
             </div>
-        </li>
+        </StyledMealItem>
     );
 
 };

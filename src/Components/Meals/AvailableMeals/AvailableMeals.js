@@ -1,6 +1,6 @@
-import classes from './AvailableMeals.module.css'
 import MealItem from "../MealItem/MealItem";
 import Card from '../../Card/Card';
+import {StyledSectionMeal, StyledUlMeal} from "./AvailableMeals.styled";
 
 const DUMMY_MEALS = [
     {
@@ -36,13 +36,13 @@ const AvailableMeals = () => {
 
 
     return (
-        <section className={classes.meals}>
+        <StyledSectionMeal>
             <Card>
-                <ul>
+                <StyledUlMeal>
                     {mealList}
-                </ul>
+                </StyledUlMeal>
             </Card>
-        </section>
+        </StyledSectionMeal>
     );
 };
 export default AvailableMeals;
