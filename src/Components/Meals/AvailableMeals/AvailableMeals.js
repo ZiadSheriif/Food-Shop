@@ -1,39 +1,47 @@
 import classes from './AvailableMeals.module.css'
+import MealItem from "../MealItem/MealItem";
+import Card from '../../Card/Card';
+
+const DUMMY_MEALS = [
+    {
+        id: '1',
+        name: 'Meal 1',
+        description: 'Meal description 1',
+        price: '100',
+    },
+    {
+        id: '2',
+        name: 'Meal 2',
+        description: 'Meal description 2',
+        price: '200'
+    },
+    {
+        id: '3',
+        name: 'Meal 3',
+        description: 'Meal description 3',
+        price: '300'
+    },
+    {
+        id: '4',
+        name: 'Meal 4',
+        description: 'Meal description 4',
+        price: '400'
+    },
+];
 
 const AvailableMeals = () => {
-    const DUMMY_MEALS = [
-        {
-            id: '1',
-            name: 'Meal 1',
-            description: 'Meal description 1',
-            price: '100',
-        },
-        {
-            id: '2',
-            name: 'Meal 2',
-            description: 'Meal description 2',
-            price: '200'
-        },
-        {
-            id: '3',
-            name: 'Meal 3',
-            description: 'Meal description 3',
-            price: '300'
-        },
-        {
-            id: '4',
-            name: 'Meal 4',
-            description: 'Meal description 4',
-            price: '400'
-        },
-    ]
-    const mealList = DUMMY_MEALS.map((meal) => <li>{meal.name}</li>);
+    const mealList = DUMMY_MEALS.map((meal) => (
+        <MealItem key={meal.id} name={meal.name} description={meal.description} price={meal.price}/>));
+    // console.dir(mealList);
+
 
     return (
-        <section>
-            <ul className={classes.meals}>
-                {mealList}
-            </ul>
+        <section className={classes.meals}>
+            <Card>
+                <ul>
+                    {mealList}
+                </ul>
+            </Card>
         </section>
     );
 };
