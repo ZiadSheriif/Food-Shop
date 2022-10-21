@@ -10,6 +10,7 @@ export const StyledHeader = styled.header`
   background-color: #8a2b06;
   color: white;
   display: flex;
+  padding:2.5rem;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
