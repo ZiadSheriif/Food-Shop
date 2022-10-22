@@ -3,7 +3,7 @@ import MealItemForm from "../MealItemForm/MealItemForm";
 
 const MealItem = (props) => {
     const price = `$${props.price}`;
-    console.log(price);
+    // console.log(price);
 
     return (
         <>
@@ -13,7 +13,7 @@ const MealItem = (props) => {
                     <em>{[props.description]}</em>
                     <StyledMealItemPrice> {price}</StyledMealItemPrice>
                 </div>
-                <MealItemForm/>
+                <MealItemForm id={props.id}/>
             </StyledMealItem>
         </>
     );
