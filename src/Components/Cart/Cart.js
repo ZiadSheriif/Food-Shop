@@ -1,10 +1,10 @@
 import Modal from '../Modal/Modal'
-import {CartStyled, TotalStyled, Button, ButtonActions, ActionStyled} from "./Cart.styled";
+import { CartStyled, TotalStyled, Button, ActionStyled } from "./Cart.styled";
 
 const Cart = (props) => {
     const cartItems = (
         <CartStyled>
-            {[{id: 'c1', name: 'Sushi', amount: 2, price: 12.99}].map((item) => (
+            {[{ id: 'c1', name: 'Sushi', amount: 2, price: 12.99 }].map((item) => (
                 <li>{item.name}</li>
             ))}
         </CartStyled>
@@ -18,7 +18,7 @@ const Cart = (props) => {
                 <span>35.62</span>
             </TotalStyled>
             <ActionStyled>
-                <ButtonActions onClick={props.onClosed}>Close</ButtonActions>
+                <Button onClick={props.onClosed}>Close</Button>
                 <Button>Order</Button>
             </ActionStyled>
         </Modal>
