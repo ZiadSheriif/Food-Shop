@@ -35,5 +35,15 @@ export const Button = styled.button
 export const ButtonActions = styled.button`
   background-color: #8a2b06;
   color: white;
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #8a2b06;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+  &:hover, &:active {
+    background-color: gray;
+    // border-color: #5a1a01;
+  }
 `
 

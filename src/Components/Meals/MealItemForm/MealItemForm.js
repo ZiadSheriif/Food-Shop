@@ -1,7 +1,6 @@
 import React from 'react';
 import {StyledButtonForm} from "./MealItemForm.styled";
 import Input from "./InputForm";
-
 const MealItemForm = (props) => {
     return (
         <>
